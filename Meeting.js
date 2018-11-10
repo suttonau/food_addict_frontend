@@ -8,7 +8,7 @@ class Meeting{
     return `
       <h3>${this.name}</h3>
       <p>Id: ${this.id}</p>
-      `
+      <ul>Locations: </ul>`
   }
 }
 
