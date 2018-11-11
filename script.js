@@ -1,7 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
+  signIn();
   getMeetings();
 
 })
+
+
+function signIn(){
+  var div = document.querySelector('#signIn')
+
+  if (div.style.display === "none") {
+    div.style.display = "block";
+    // var text = document.createElement("TEXTAREA");
+    // var node = document.createTextNode("Please enter your name");
+    // text.appendChild(node);
+    // div.appendChild(text);
+
+  } else {
+    div.style.display = "none";
+  }
+}
 
 function getMeetings() {
   fetch(`http://localhost:3000/meetings`)
