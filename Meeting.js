@@ -8,8 +8,13 @@ class Meeting{
     return `
       <h3>${this.name}</h3>
       <p>Id: ${this.id}</p>
-      <ul>Locations: </ul>`
+      <dl>Locations: </dl>
+
+
+      `
   }
 }
 
 //add  after div <img src=>
+// <dt id='locName-${this.id}'>Locations: </dt>
+// <dd id='locDesc-${this.id}'></dd>

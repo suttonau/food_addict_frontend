@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 })
 
-
 function signIn(){
   var div = document.querySelector('#signIn')
 
@@ -37,7 +36,9 @@ function createMeeting(meeting) {
   document.querySelector('#meetings').appendChild(meetingDiv)
   meeting.locations.forEach(location => {
     let locationInstance = new Location(location.name, location.description, location.address, location.image)
-    debugger
-    meetingDiv.querySelector('ul').appendChild(locationInstance.render())
+    // debugger
+    meetingDiv.querySelector('dl').appendChild(locationInstance.render().locationName)
+    meetingDiv.querySelector('dl').appendChild(locationInstance.render().locationDesc)
+
   })
 }

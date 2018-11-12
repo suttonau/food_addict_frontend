@@ -7,12 +7,21 @@ class Location{
   }
 
   render(){
-  let liName = document.createElement('li')
+  let liName = document.createElement('dt')
   liName.innerHTML = this.name
 
-  let liDesc = document.createElement('li')
-  liDesc.innerHTML = this.description
-  return liName
-  return liDesc
+  let liDesc = document.createElement('dd')
+  liDesc.innerHTML = `-${this.description}`
+
+  let imgEl = document.createElement('img');
+  imgEl.src = this.image;
+
+
+  return { locationName: liName, locationDesc: liDesc };
+
+
   }
 }
+//
+// ret = Location.render()
+// ret.arg1 kjsdfjlk
